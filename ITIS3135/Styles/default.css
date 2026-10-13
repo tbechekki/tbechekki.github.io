@@ -55,7 +55,7 @@ h1 {
 h2 {
     font-family: "Montserrat", Arial, sans-serif;
     display: inline-block;
-    background: linear-gradient(90deg, #7aa2ff, #c58bff, #29c065);
+    background: linear-gradient(90deg, #7aa2ff, #c58bff, #7aa2ff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -87,7 +87,7 @@ header {
     column-gap: 14px;
     padding-bottom: 14px;
     border-bottom: 2px solid;
-    border-image: linear-gradient(90deg, #4f7cff, #a259ff, #ff5fa2, #29c065) 1;
+    border-image: linear-gradient(90deg, #efefef) 1;
 }
 
 header > a {
@@ -119,7 +119,7 @@ details {
 
 summary {
     cursor: pointer;
-    color: #29c065;
+    color: #af9dff;
 }
 
 summary:hover {
@@ -179,7 +179,7 @@ footer {
     margin-top: 30px;
     padding-top: 14px;
     border-top: 2px solid;
-    border-image: linear-gradient(90deg, #4f7cff, #a259ff, #ff5fa2, #29c065) 1;
+    border-image: linear-gradient(90deg, #efefef) 1;
     font-size: 0.9rem;
 }
 
