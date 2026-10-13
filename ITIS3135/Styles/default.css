@@ -80,9 +80,7 @@ img {
 header {
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-areas:
-        "logo title"
-        "menu menu";
+    grid-template-areas: "logo title" "menu menu";
     align-items: center;
     column-gap: 14px;
     padding-bottom: 14px;
@@ -95,9 +93,7 @@ header > a {
     line-height: 0;
 }
 
-header h1 {
-    grid-area: title;
-}
+
 
 header nav {
     grid-area: menu;
