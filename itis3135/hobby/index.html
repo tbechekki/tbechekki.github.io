@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer ⚽ What</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+    <style>
+        /* Palette: pitch green #0f3d2a, chalk #f3efdc (softer than white), gold #f2c14e, card red #e4572e */
+        html {
+            background-color: #0f3d2a;
+        }
+
+        body {
+            max-width: 56rem;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+            background-color: #0f3d2a;
+            color: #f3efdc;
+            font-family: "Source Sans 3", Arial, sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.65;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: "Oswald", Arial, sans-serif;
+            font-size: 2.6rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #f2c14e;
+        }
+
+        h2 {
+            margin: 1.5rem 0 1rem;
+            font-family: "Oswald", Arial, sans-serif;
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: #f2c14e;
+            border-bottom: 3px solid #e4572e;
+            padding-bottom: 0.3rem;
+        }
+
+        a,
+        a:visited {
+            color: #f2c14e;
+        }
+
+        a:hover {
+            color: #e4572e;
+        }
+
+        header {
+            padding: 1.25rem 0 0.75rem;
+            border-bottom: 3px solid #f2c14e;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.5rem;
+            margin-top: 0.75rem;
+            font-family: "Oswald", Arial, sans-serif;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        main {
+            padding: 0.5rem 0 1.5rem;
+        }
+
+        /* Sections act as pages; the script sets hidden on all but one */
+        section[hidden] {
+            display: none;
+        }
+
+        figure {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background-color: #164f36;
+            border-radius: 12px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            border-radius: 12px;
+        }
+
+        figcaption {
+            margin-top: 0.75rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        figcaption p {
+            margin: 0.25rem 0 0;
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+        table {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 0.6rem 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #2f6b4c;
+        }
+
+        th {
+            color: #f2c14e;
+            font-family: "Oswald", Arial, sans-serif;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        footer {
+            padding: 1rem 0 2rem;
+            border-top: 3px solid #f2c14e;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            margin: 0.4rem 0;
+        }
+
+        /* Media queries stay last */
+        @media (max-width: 600px) {
+            body {
+                font-size: 1rem;
+            }
+
+            nav {
+                gap: 0.4rem 1rem;
+            }
+        }
+    </style>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Soccer</h1>
+
+        <nav>
+            <a href="#what">What</a>
+            <a href="#who">Who</a>
+            <a href="#when">When</a>
+            <a href="#where">Where</a>
+            <a href="#how">How</a>
+            <a href="#why">Why</a>
+            <a href="#ai-prompts">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section ids let the nav links find them; What is the home page and shows first -->
+        <section id="what">
+            <h2>What</h2>
+
+            <p>
+                Soccer is a game of two teams, one ball, and ninety minutes of deciding where to
+                run next. No hands, no timeouts, and very little room to hide a bad touch.
+            </p>
+
+            <figure>
+                <img src="images/ball.svg" alt="A cartoon soccer ball on a green field" width="400" height="300">
+                <figcaption>
+                    The only equipment the game really needs
+                    <p><em>Drawn as an SVG by AI; the prompt is listed under AI Prompts.</em></p>
+                </figcaption>
+            </figure>
+
+            <p>
+                I am involved in it three ways: I play it, I coach it, and I referee it. Each one
+                shows me a different side of the same game.
+            </p>
+        </section>
+
+        <section id="who">
+            <h2>Who</h2>
+
+            <p>
+                I am Taha Echekki. In my free time, I am very involved in the world of soccer. I play
+                three to four days a week at the soccer fields here, and I work as a soccer coach for
+                young kids, training at different schools each week. I am also a certified U.S. Soccer
+                referee, and on weekends I referee youth and adult games. My favorite team that I have
+                been supporting since I was 9 years old is Arsenal. They are the current defending 
+                champions of England and future champions of Europe.
+            </p>
+
+            <figure>
+                <img src="images/trophy.svg" alt="A cartoon gold trophy with a star" width="400" height="300">
+                <figcaption>
+                    Every team is chasing the same thing
+                    <p><em>Drawn as an SVG by AI; the prompt is listed under AI Prompts.</em></p>
+                </figcaption>
+            </figure>
+
+            <ul>
+                <li>Players, who decide the match with their feet.</li>
+                <li>Coaches, who decide it with preparation.</li>
+                <li>Referees, who keep it fair for both sides.</li>
+            </ul>
+        </section>
+
+        <section id="when">
+            <h2>When</h2>
+
+            <p>
+                Soccer fits around a school schedule, so my week has a rhythm. Here is how the three
+                roles line up.
+            </p>
+
+            <table>
+                <caption>How soccer fits into my year</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Role</th>
+                        <th scope="col">When</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Playing</td>
+                        <td>Pickup games and weekends</td>
+                    </tr>
+                    <tr>
+                        <td>Refereeing</td>
+                        <td>Scheduled match days</td>
+                    </tr>
+                    <tr>
+                        <td>Coaching</td>
+                        <td>Starting in September</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure>
+                <img src="images/whistle.svg" alt="A cartoon referee whistle" width="400" height="300">
+                <figcaption>
+                    The whistle starts and ends everything
+                    <p><em>Drawn as an SVG by AI; the prompt is listed under AI Prompts.</em></p>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="where">
+            <h2>Where</h2>
+
+            <p>
+                A soccer game needs only a flat patch of grass and something to mark the goals.
+                That is why it is played in almost every country on earth.
+            </p>
+
+            <figure>
+                <img src="images/pitch.svg" alt="A cartoon overhead view of a soccer pitch with players" width="400" height="300">
+                <figcaption>
+                    The pitch from above
+                    <p><em>Drawn as an SVG by AI; the prompt is listed under AI Prompts.</em></p>
+                </figcaption>
+            </figure>
+
+            <ul>
+                <li>Full-size fields for league matches.</li>
+                <li>Smaller fields for youth games and practice.</li>
+                <li>Parks and open lawns for pickup games.</li>
+            </ul>
+        </section>
+
+        <section id="how">
+            <h2>How</h2>
+
+            <p>
+                The basics are simple. The skill is in doing them well while a defender is chasing you.
+            </p>
+
+            <figure>
+                <img src="images/boots.svg" alt="A cartoon red soccer boot with studs" width="400" height="300">
+                <figcaption>
+                    Good boots and a lot of repetition
+                    <p><em>Drawn as an SVG by AI; the prompt is listed under AI Prompts.</em></p>
+                </figcaption>
+            </figure>
+
+            <ol>
+                <li>Pass and receive with both feet.</li>
+                <li>Move into space before the ball arrives.</li>
+                <li>Defend as a group, not alone.</li>
+                <li>As a referee, know the laws and stay close to the play.</li>
+            </ol>
+        </section>
+
+        <section id="why">
+            <h2>Why</h2>
+
+            <p>
+                I like that soccer is simple to start and almost impossible to master. Playing keeps
+                me moving, coaching teaches me to explain what I know, and refereeing teaches me to
+                stay calm when everyone disagrees.
+            </p>
+
+            <figure>
+                <img src="images/clipboard.svg" alt="A cartoon coach's clipboard with a tactics diagram" width="400" height="300">
+                <figcaption>
+                    Coaching is planning that players turn into movement
+                    <p><em>Drawn as an SVG by AI; the prompt is listed under AI Prompts.</em></p>
+                </figcaption>
+            </figure>
+
+            <p>
+                Most of all, I like that anyone can join. A ball and a patch of grass are enough,
+                and the same game that fills a stadium works in a park.
+            </p>
+
+            <blockquote>
+                &ldquo;If you do not believe you can do it, you have no chance at all.&rdquo;
+                &mdash; Arsène Wenger
+            </blockquote>
+        </section>
+
+        <section id="ai-prompts">
+            <h2>AI Prompts</h2>
+
+            <p>
+                I used AI to help write the code and text of this page and to draw the images. The
+                prompts are below.
+            </p>
+
+            <p>
+                I read and checked everything the AI produced before using it, and I can explain
+                and change any part of this page.
+            </p>
+
+            <ol>
+                <li>Build a one-page soccer hobby site with Who, What, When, Where, How, Why and AI Prompts sections, using embedded CSS and a script that shows one section at a time.</li>
+                <li>Draw a flat cartoon SVG of a soccer ball on a green field.</li>
+                <li>Draw a flat cartoon SVG of a gold trophy with a star.</li>
+                <li>Draw a flat cartoon SVG of a referee whistle.</li>
+                <li>Draw a flat cartoon SVG of a soccer pitch seen from above, with players.</li>
+                <li>Draw a flat cartoon SVG of a red soccer boot.</li>
+                <li>Draw a flat cartoon SVG of a coach's clipboard with a tactics diagram.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by <a href="../../echekkiwebstudio.co/">Echekki Web Studio</a></p>
+
+        <p>
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.charlotte.edu%2Ftechekki%2Fitis3135%2Fhobby%2F">HTML</a> ⚽
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwebpages.charlotte.edu%2Ftechekki%2Fitis3135%2Fhobby%2F">CSS</a> ⚽
+            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/techekki/itis3135/hobby/">Accessibility</a>
+        </p>
+
+        <p>Echekki Web Studio &copy;2026</p>
+
+        <p><em>Trim code, high flight.</em></p>
+    </footer>
+
+    <script>
+        // Show one section at a time and keep the title in step with the visible h2
+        const sections = document.querySelectorAll("section");
+        const siteName = document.querySelector("h1").textContent;
+
+        function show(id) {
+            let found = false;
+            sections.forEach(function (s) {
+                const match = s.id === id;
+                s.hidden = !match;
+                if (match) {
+                    found = true;
+                    document.title = siteName + " ⚽ " + s.querySelector("h2").textContent;
+                }
+            });
+            return found;
+        }
+
+        document.querySelectorAll("nav a").forEach(function (link) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                const id = link.getAttribute("href").slice(1);
+                show(id);
+                history.replaceState(null, "", "#" + id);
+            });
+        });
+
+        if (!show(location.hash.slice(1))) {
+            show("what");
+        }
+    </script>
+</body>
+</html>
