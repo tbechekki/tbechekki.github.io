@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taha Echekki's Trim Eagle | ITIS3135 | Survey</title>
+    <link rel="icon" href="images/trim_eagle_logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600&display=swap">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Survey</h2>
+
+        <!-- The ids on this page (title, description, survey-form, the input and label ids, dropdown, submit) are required by the freeCodeCamp Survey Form tests -->
+        <h3 id="title">Trim Eagle Barbershop: Book Your Trim</h3>
+
+        <p id="description">
+            Fill out the form below to schedule your appointment. Our barbers serve
+            customers of every feather, fur, and scale.
+        </p>
+
+        <form id="survey-form">
+            <fieldset>
+                <legend>About You</legend>
+
+                <p>
+                    <label id="name-label" for="name">Name</label>
+                    <input id="name" name="name" type="text" placeholder="Enter your full name" required>
+                </p>
+
+                <p>
+                    <label id="email-label" for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Enter your email for a confirmation" required>
+                </p>
+
+                <p>
+                    <label id="number-label" for="number">Number of People in Your Party (1-5)</label>
+                    <input id="number" name="party-size" type="number" min="1" max="5" placeholder="Enter a number from 1 to 5">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>What Type of Organism Are You?</legend>
+                <label><input type="radio" name="organism" value="mammal" checked> Mammal</label>
+                <label><input type="radio" name="organism" value="bird"> Bird</label>
+                <label><input type="radio" name="organism" value="reptile"> Reptile</label>
+                <label><input type="radio" name="organism" value="insect"> Insect</label>
+            </fieldset>
+
+            <p>
+                <label for="dropdown">Which Service Would You Like?</label>
+                <select id="dropdown" name="service">
+                    <option value="" disabled selected>Choose a service</option>
+                    <option value="classic">Classic Trim</option>
+                    <option value="fade">Fade</option>
+                    <option value="crest">Crest Styling</option>
+                    <option value="beard">Beard Trim</option>
+                    <option value="talon">Talon Manicure</option>
+                </select>
+            </p>
+
+            <fieldset>
+                <legend>Preferred Appointment Time</legend>
+                <label><input type="radio" name="time" value="morning" checked> Morning</label>
+                <label><input type="radio" name="time" value="afternoon"> Afternoon</label>
+                <label><input type="radio" name="time" value="evening"> Evening</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Add-Ons (Choose All That Apply)</legend>
+                <label><input type="checkbox" name="addons" value="hot-towel"> Hot towel wrap</label>
+                <label><input type="checkbox" name="addons" value="shampoo"> Shampoo and conditioning</label>
+                <label><input type="checkbox" name="addons" value="wing-massage"> Wing massage</label>
+                <label><input type="checkbox" name="addons" value="beak-polish"> Beak polish</label>
+            </fieldset>
+
+            <p>
+                <label for="comments">Anything Your Barber Should Know?</label>
+                <textarea id="comments" name="comments" placeholder="Style requests, sensitivities, or other notes"></textarea>
+            </p>
+
+            <button id="submit" type="submit">Book My Trim</button>
+        </form>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/include.min.js"></script>
+</body>
+</html>

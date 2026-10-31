@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soccer ⚽ What</title>
+    <title>Hobbies</title>
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -379,9 +379,8 @@
     </footer>
 
     <script>
-        // Show one section at a time and keep the title in step with the visible h2
+        // Show one section at a time
         const sections = document.querySelectorAll("section");
-        const siteName = document.querySelector("h1").textContent;
 
         function show(id) {
             let found = false;
@@ -390,7 +389,6 @@
                 s.hidden = !match;
                 if (match) {
                     found = true;
-                    document.title = siteName + " ⚽ " + s.querySelector("h2").textContent;
                 }
             });
             return found;

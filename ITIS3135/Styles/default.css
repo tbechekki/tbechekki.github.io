@@ -1,4 +1,4 @@
-/* Course site: navy base with a slow violet/pink/orange swirl. Single rules for h1 and h2 (CSSLint). */
+/* Course site: plain navy base. Single rules for h1 and h2 (CSSLint). */
 html { background: #0b0f2a; }
 body {
   max-width: 64rem;
@@ -11,30 +11,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-body::before, body::after {
-  content: "";
-  position: fixed;
-  width: 90vmax;
-  height: 90vmax;
-  border-radius: 50%;
-  filter: blur(70px);
-  opacity: 0.45;
-  z-index: -1;
-}
-body::before {
-  top: -40vmax;
-  left: -30vmax;
-  background: radial-gradient(circle at 30% 30%, #7a5cff, transparent 60%), radial-gradient(circle at 70% 70%, #ff5fa2, transparent 55%);
-  animation: swirl 60s linear infinite;
-}
-body::after {
-  bottom: -45vmax;
-  right: -30vmax;
-  background: radial-gradient(circle at 40% 40%, #ff9a6b, transparent 60%), radial-gradient(circle at 70% 30%, #3b4cff, transparent 55%);
-  animation: swirl 90s linear infinite reverse;
-}
-@keyframes swirl { to { transform: rotate(360deg); } }
-
 h1 { font-family: "Inter", sans-serif; font-weight: 600; font-size: 1.05rem; margin: 0; }
 h2 {
   font-family: "Montserrat", sans-serif;
@@ -45,8 +21,8 @@ h2 {
   color: transparent;
 }
 
-a { color: #ffb37a; }
-a:visited { color: #ffb37a; }
+a { color: #7aa2ff; }
+a:visited { color: #7aa2ff; }
 a:hover { color: #ff8fc0; }
 
 header {
@@ -56,13 +32,23 @@ header {
   gap: 0.5rem 1.5rem;
   padding: 0.6rem 1.25rem;
   background: #0d0d14;
-  border-bottom: 1px solid #2a2a3a;
+  /* Full-width band: shadows stretch the background and bottom line to the window edges */
+  box-shadow: 0 0 0 100vmax #0d0d14, 0 1px 0 100vmax #2a2a3a;
+  clip-path: inset(0 -100vmax -1px);
 }
 header > a { display: flex; order: -1; }
 header a, header summary { color: #eef0ff; text-decoration: none; font-weight: 500; }
 header a:visited { color: #eef0ff; }
 header a:hover, header summary:hover { color: #ff8fc0; }
 nav { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+/* Secondary menu: its own row under the primary, smaller, for pages that don't share this look */
+header nav + nav {
+  flex-basis: 100%;
+  gap: 1.25rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid #2a2a3a;
+  font-size: 0.85rem;
+}
 details { position: relative; }
 summary { cursor: pointer; list-style: none; }
 summary::-webkit-details-marker { display: none; }
@@ -89,13 +75,57 @@ footer {
   padding: 1rem 1.25rem;
   text-align: center;
   background: #0d0d14;
-  border-top: 1px solid #2a2a3a;
+  /* Full-width band, same trick as the header with the line on top */
+  box-shadow: 0 0 0 100vmax #0d0d14, 0 -1px 0 100vmax #2a2a3a;
+  clip-path: inset(-1px -100vmax 0);
 }
 footer nav { justify-content: center; }
 
+/* Survey page: #description is the intro line, #survey-form is the booking form, #submit is its button */
+#description { font-style: italic; }
+#survey-form {
+  max-width: 40rem;
+  padding: 1.5rem;
+  color: #0b2a6b;
+  background: #cfe3ff;
+  border: 1px solid #2a2a3a;
+  border-radius: 12px;
+}
+fieldset {
+  margin: 0 0 1.25rem;
+  padding: 1rem;
+  border: 1px solid #2a2a3a;
+  border-radius: 10px;
+}
+legend { padding: 0 0.4rem; font-family: "Montserrat", sans-serif; color: #0b2a6b; }
+form label { display: block; margin: 0.3rem 0; }
+form p > label { font-weight: 600; }
+input, select, textarea {
+  box-sizing: border-box;
+  font: inherit;
+  color: #0b2a6b;
+  background: #fff;
+  border: 1px solid #2a2a3a;
+  border-radius: 6px;
+}
+input[type="text"], input[type="email"], input[type="number"], select, textarea { width: 100%; padding: 0.5rem; }
+input:focus, select:focus, textarea:focus { outline: 2px solid #0b2a6b; }
+input[type="radio"], input[type="checkbox"] { accent-color: #0b2a6b; }
+textarea { min-height: 6rem; resize: vertical; }
+#submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font: inherit;
+  font-weight: 600;
+  color: #0b0f2a;
+  background: linear-gradient(90deg, #7aa2ff, #c58bff, #ff9a6b);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#submit:hover, #submit:focus { background: #ff8fc0; }
+
 @media (max-width: 600px) {
   main > img { float: none; display: block; margin: 0 auto 1rem; }
-}
-@media (prefers-reduced-motion: reduce) {
-  body::before, body::after { animation: none; }
 }
